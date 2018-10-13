@@ -367,6 +367,18 @@
                   title:'出版社'
 
               },{
+                  field:'page',
+                  title:'页数'
+
+              },{
+                  field:'price',
+                  title:'价格'
+
+              },{
+                  field:'content',
+                  title:'摘要内容'
+
+              },{
                   field:'button',
                   title:'操作',
                   events:operateEvents,

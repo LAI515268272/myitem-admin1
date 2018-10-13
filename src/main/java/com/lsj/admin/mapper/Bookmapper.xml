@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lsj.admin.mapper.Bookmapper">
+    <!--查询所有-->
+    <select id="selectByAll" resultType="Book" parameterType="Book">
+        select b.id,b.sname,b.author,b.publish,b.publishdate,b.Page,b.Price,b.Content
+         from book as b
+        <where>
+            <if test="search!='' and search!=null">
+                and sname like CONCAT('%', #{search}, '%')
+            </if>
+
+        </where>
+        <if test="order!='' and order!=null">
+            order by id ${order}
+        </if>
+        <if test="offset!=null and limit!=null">
+            limit #{offset},#{limit}
+        </if>
+
+    </select>
+    <!--统计数量-->
+    <select id="selectBySun" resultType="Integer" >
+        select count(id) from book
+    </select>
+    <!--通过id删除-->
+    <delete id="deleteById" parameterType="Book">
+        delete  from book where id=#{id}
+    </delete>
+    <!--通过id查询-->
+    <select id="selectByID" parameterType="Book" resultType="Book">
+        select b.id,b.sname,b.author,b.publish,b.publishdate,b.Page,b.Price,b.Content
+         from book as b where id=#{id}
+    </select>
+    <!--通过id修改-->
+    <update id="updateByid" parameterType="Book">
+        update  book set
+        sname=#{sname},author=#{author},publish=#{publish},publishdate=#{publishdate},Page=#{page},Price=#{price},Content=#{content}
+        where id=#{id}
+    </update>
+    <!--添加-->
+    <insert id="insertBY" parameterType="Book">
+
+        insert into book(sname,author,publish,publishdate,page,price,content)
+        values (#{sname},#{author},#{publish},#{publishdate},#{page},#{price},#{content})
+    </insert>
+
+</mapper>

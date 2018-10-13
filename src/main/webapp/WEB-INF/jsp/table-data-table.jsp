@@ -150,7 +150,7 @@
           <div class="tile">
             <div class="tile-body">
               <table id="mytable" style="text-align: center">
-                  <button type="button" class="btn btn-group" id="btn1">新增</button>
+                  <button type="button" class="btn btn-info" id="btn1">新增</button>
 
 
               </table>
@@ -165,7 +165,7 @@
             <div class="modal-dialog modal-lg  ">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        添加图书
+                        <h1>添加图书</h1>
                         <button type="button" class="close" data-dismiss="modal">关闭</button>
 
                     </div>
@@ -351,7 +351,8 @@
               sidePagination: 'server',//服务器端分页
               pageNumber: 1,//默认加载页
               pageSize: 3,
-
+              /*sortName:undefined,*/
+              sortOrder:'desc',
               method: 'post',
               columns:[{
                   field:'id',

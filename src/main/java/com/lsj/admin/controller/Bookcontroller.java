@@ -4,16 +4,11 @@ import com.alibaba.fastjson.JSONObject;
 import com.lsj.admin.model.Book;
 import com.lsj.admin.service.Bookservice;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpSession;
-import javax.xml.transform.sax.SAXSource;
-import java.time.Clock;
 import java.util.Date;
 import java.util.List;
 

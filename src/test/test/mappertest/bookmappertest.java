@@ -19,7 +19,7 @@ import java.util.List;
 @ContextConfiguration(locations = {"classpath:spring/spring-dao.xml","classpath:spring/spring-service.xml"})
 public class bookmappertest {
     @Autowired
-    Bookservice ser;
+    private Bookservice ser;
     /*查询所有*/
     @Test
     public void selectbyall() throws  Exception{

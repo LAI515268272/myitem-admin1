@@ -21,7 +21,7 @@
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <!-- Font-icon css-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="app sidebar-mini rtl">
@@ -275,13 +275,7 @@
                                 </div>
 
                             </div>
-                            <div class="form-group">
-                                <label for="publishdate" class="col-md-3 control-label">出版日期<span style="color: red">(*)</span>  :</label>
-                                <div class="col-md-3">
-                                    <input type="date" name="publishdate" id="publishdate2" class="form-control" />
-                                </div>
 
-                            </div>
                             <div class="form-group">
                                 <label for="page" class="col-md-3 control-label">页数<span style="color: red">(*)</span>  :</label>
                                 <div class="col-md-3">

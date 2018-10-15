@@ -37,7 +37,7 @@
     <!--通过id修改-->
     <update id="updateByid" parameterType="Book">
         update  book set
-        sname=#{sname},author=#{author},publish=#{publish},publishdate=#{publishdate},Page=#{page},Price=#{price},Content=#{content}
+        sname=#{sname},author=#{author},publish=#{publish},Page=#{page},Price=#{price},Content=#{content}
         where id=#{id}
     </update>
     <!--添加-->
